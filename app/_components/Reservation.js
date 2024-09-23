@@ -9,7 +9,7 @@ export default async function Reservation({ cabin }) {
   const bookedDates = await getBookedDatesByCabinId(cabin.id);
   const session = await auth();
   return (
-    <div className="grid gap-10 grid-cols-2 max-h-[400px]">
+    <div className="max-w-full p-6 grid gap-10 max-md:grid-cols-1 grid-cols-2 max-h-[400px]">
       <DateSelector
         cabin={cabin}
         bookedDates={bookedDates}

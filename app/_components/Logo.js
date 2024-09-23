@@ -4,15 +4,17 @@ import Link from "next/link";
 function Logo() {
   return (
     <Link href="/" className="flex items-center gap-4 z-10">
-      <Image
-        src="/logo.png"
+      {/* <Image
+        src="/logo2.png"
         quality={100}
         height="100"
         width="200"
         alt="The Wild Oasis logo"
-        // className="rounded-full"
-      />
-      {/* <span className="text-xl font-semibold text-primary-100">EasyRooms</span> */}
+        className="invert-0"
+      /> */}
+      <span className="text-xl p-4 font-semibold text-primary-800">
+        EasyRooms
+      </span>
     </Link>
   );
 }

@@ -12,11 +12,9 @@ export default async function Page() {
   const cabins = await getCabins();
   const noOfCabins = cabins.length;
   return (
-    <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
+    <div className="grid lg:grid-cols-5 p-4 lg:gap-x-24 gap-y-12 lg:gap-y-32 text-lg items-center">
       <div className="col-span-3">
-        <h1 className="text-4xl mb-10 text-accent-400 font-medium">
-          Welcome to EasyRooms
-        </h1>
+        <h1 className="text-4xl mb-10 font-medium">Welcome to EasyRooms</h1>
 
         <div className="space-y-8 leading-9">
           <p>
@@ -36,26 +34,26 @@ export default async function Page() {
         </div>
       </div>
 
-      <div className="relative aspect-square col-span-2">
+      <div className="lg:relative lg:aspect-square lg:col-span-2">
         <Image
           src="/about1.jpg"
           fill
           alt="Family sitting around a fire pit in front of cabin"
-          className="object-cover"
+          className="object-cover mx-auto max-md:hidden"
         />
       </div>
 
-      <div className="relative aspect-square col-span-2">
+      <div className="relative aspect-square w-full col-span-2">
         <Image
           src="/about2.jpg"
           fill
           alt="Family that manages The Wild Oasis"
-          className="object-cover"
+          className="object-cover max-md:mx-auto max-md:-translate-x-12 max-md:h-40 max-md:w-40"
         />
       </div>
 
       <div className="col-span-3">
-        <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+        <h1 className="text-4xl mb-10 font-medium">
           Managed by our group since 2020
         </h1>
 
@@ -77,7 +75,7 @@ export default async function Page() {
           <div>
             <Link
               href="/cabins"
-              className="inline-block mt-4 hover:bg-accent-900 px-8 py-5 text-lg font-semibold bg-accent-600 transition-all text-primary-50"
+              className="inline-block mt-4 px-8 py-5 text-lg font-semibold bg-primary-500 transition-all text-gray-100"
             >
               Explore our luxury rooms
             </Link>

@@ -51,7 +51,7 @@ function DateSelector({ cabin, bookedDates, settings }) {
         }
       />
 
-      <div className="flex items-center justify-between px-8 bg-accent-800 text-primary-50 h-[72px]">
+      <div className="flex items-center justify-between px-8 bg-primary-500 text-gray-100 h-[72px]">
         <div className="flex items-baseline gap-6">
           <p className="flex gap-2 items-baseline">
             {discount > 0 ? (
@@ -68,8 +68,8 @@ function DateSelector({ cabin, bookedDates, settings }) {
           </p>
           {numNights ? (
             <>
-              <p className="bg-accent-600 px-3 py-2 text-2xl">
-                <span>&times;</span> <span>{numNights}</span>
+              <p className="bg-primary-500">
+                <span className="tex-6xl">&times;{numNights}</span>
               </p>
               <p>
                 <span className="text-lg font-bold uppercase">Total</span>{" "}
@@ -81,7 +81,7 @@ function DateSelector({ cabin, bookedDates, settings }) {
 
         {range.from || range.to ? (
           <button
-            className="border border-primary-800 py-2 px-4 text-sm font-semibold"
+            className="border border-gray-100 py-2 px-4 text-sm font-semibold"
             onClick={resetRange}
           >
             Clear

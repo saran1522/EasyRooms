@@ -5,12 +5,12 @@ import { auth } from "@/app/_lib/auth";
 export default async function Navigation() {
   const session = await auth();
   return (
-    <nav className="z-10 text-xl">
+    <nav className="z-10 text-xl max-md:hidden">
       <ul className="flex gap-16 items-center">
         <li>
           <Link
             href="/cabins"
-            className="hover:text-primary-400 text-accent-600 transition-colors"
+            // className="" transition-colors"
           >
             Rooms
           </Link>
@@ -18,7 +18,7 @@ export default async function Navigation() {
         <li>
           <Link
             href="/about"
-            className="hover:text-primary-400 text-accent-600 transition-colors"
+            // className="hover:text-primary-400 text-accent-600 transition-colors"
           >
             About
           </Link>
@@ -27,7 +27,7 @@ export default async function Navigation() {
           {session?.user ? (
             <Link
               href="/account"
-              className="hover:text-primary-400 text-accent-600 transition-colors"
+              // className="hover:text-primary-400 text-accent-600 transition-colors"
             >
               <img
                 src={session.user.image}
@@ -38,7 +38,7 @@ export default async function Navigation() {
           ) : (
             <Link
               href="/account"
-              className="hover:text-primary-400 text-accent-600 transition-colors"
+              // className="hover:text-primary-400 text-accent-600 transition-colors"
             >
               Guest area
             </Link>

@@ -14,11 +14,11 @@ export default async function Page({ searchParams }) {
   const filter = searchParams?.capacity ?? "all";
 
   return (
-    <div>
-      <h1 className="text-4xl mb-5 text-accent-400 font-medium">
+    <div className="p-4">
+      <h1 className="text-4xl mb-5 text-primary-400 font-medium">
         Our Luxury Rooms
       </h1>
-      <p className="text-primary-200 text-lg mb-10">
+      <p className="text-lg mb-10">
         Cozy yet luxurious rooms, located right in the heart of the Indian
         Hills. Imagine waking up to beautiful mountain views, spending your days
         exploring the dark forests around, or just relaxing in your private hot

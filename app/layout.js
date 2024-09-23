@@ -3,8 +3,9 @@ import Logo from "./_components/Logo";
 import Navigation from "./_components/Navigation";
 import "@/app/_styles/globals.css";
 
-import { Poppins } from "next/font/google";
+// import { Poppins } from "next/font/google";
 import { ReservationProvider } from "./_components/ReservationContext";
+import Footer from "./_components/Footer";
 
 export const metadata = {
   title: {
@@ -13,25 +14,22 @@ export const metadata = {
   },
 };
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["300"],
-});
+// const poppins = Poppins({
+//   subsets: ["latin"],
+//   display: "swap",
+//   weight: ["300"],
+// });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col relative`}
-        // className={`bg-primary-950 text-primary-100 min-h-screen flex flex-col relative`}
-      >
+      <body className={`bg-[#ffffff] text-gray-800 borde`}>
         <Header />
-        <div className="flex-1 px-8 py-12 grid">
-          <main className="max-w-7xl mx-auto w-full">
-            <ReservationProvider>{children}</ReservationProvider>
-          </main>
-        </div>
+
+        <main className="p-2">
+          <ReservationProvider>{children}</ReservationProvider>
+        </main>
+        <Footer />
       </body>
     </html>
   );

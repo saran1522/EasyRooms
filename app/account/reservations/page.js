@@ -9,9 +9,7 @@ export default async function Page() {
 
   return (
     <div>
-      <h2 className="font-semibold text-2xl text-accent-400 mb-7">
-        Your reservations
-      </h2>
+      <h2 className="font-semibold text-2xl mb-7">Your reservations</h2>
 
       {bookings.length === 0 ? (
         <p className="text-lg">
