@@ -42,9 +42,9 @@ function ReservationForm({ cabin, user }) {
 
       <form
         action={createReservationWithData}
-        className="bg-primary-900 py-10 px-16 text-lg flex gap-5 flex-col"
+        className="bg-primary-900 w-full py-10 px-16 text-lg flex gap-5 flex-col"
       >
-        <div className="space-y-2">
+        <div className="space-y-2 w-full">
           <label htmlFor="numGuests">How many guests?</label>
           <select
             name="numGuests"
@@ -53,7 +53,7 @@ function ReservationForm({ cabin, user }) {
             required
           >
             <option value="" key="">
-              Select number of guests...
+              Select guests...
             </option>
             {Array.from({ length: maxCapacity }, (_, i) => i + 1).map((x) => (
               <option value={x} key={x}>

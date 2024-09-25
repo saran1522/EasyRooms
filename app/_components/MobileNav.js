@@ -4,7 +4,7 @@ function MobileNav({ showMobileNav, session }) {
   return (
     <div
       className={`${
-        showMobileNav ? "w-full" : "w-0"
+        showMobileNav ? "w-full" : "w-0 hidden"
       } z-30 top-15 right-0 bg-primary-400 transition-all fixed h-screen`}
     >
       <ul className="flex mt-10 font-semibold text-gray-100 flex-col w-full h-screen gap-16 items-center">

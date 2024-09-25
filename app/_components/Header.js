@@ -6,7 +6,7 @@ import { auth } from "@/app/_lib/auth";
 async function Header() {
   const session = await auth();
   return (
-    <header className="px-8 flex items-center max-w-full justify-between ">
+    <header className="max-md:px-3 px-8 flex items-center max-w-full justify-between ">
       <Logo />
       <Navigation />
       <Toggler session={session} />

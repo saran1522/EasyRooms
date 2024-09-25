@@ -14,7 +14,7 @@ export default function Page() {
           </h1>
           <a
             href="/cabins"
-            className="bg-[#6b66ff] px-6 py-4 rounded-lg text-lg font-semibold hover:bg-btn-750 transition-all text-gray-100"
+            className="bg-primary-500 px-6 py-4 rounded-lg text-lg font-semibold hover:bg-primary-400 transition-all text-gray-100"
           >
             Explore Rooms &rarr;
           </a>
@@ -31,10 +31,10 @@ export default function Page() {
       </div>
       <div className="w-full flex flex-col gap-4 lg:mt-24 mt-10 leading-8 ">
         <h3 className="text-center lg:text-5xl text-2xl font-semibold">
-          Unforgettable Memories
+          Unforgettable <span className="text-primary-500 ">Memories</span>
         </h3>
         <h3 className="text-center lg:text-5xl text-2xl font-semibold">
-          Unparalleled Comfort
+          Unparalleled <span className="text-primary-500 ">Comfort</span>
         </h3>
         <p className="text-center lg:text-lg lg:w-[70%] mx-auto">
           Experience Ultimate travel comfort with our innovative hotel booking

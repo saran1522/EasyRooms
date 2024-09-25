@@ -8,12 +8,12 @@ export default async function Page() {
   const bookings = await getBookings(session.user.guestId);
 
   return (
-    <div>
+    <div className="w-full overflow-auto">
       <h2 className="font-semibold text-2xl mb-7">Your reservations</h2>
 
       {bookings.length === 0 ? (
         <p className="text-lg">
-          You have no reservations yet. Check out our{" "}
+          You have no reservations yet. Check out our
           <a className="underline text-accent-500" href="/cabins">
             luxury rooms &rarr;
           </a>

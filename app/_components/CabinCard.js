@@ -51,7 +51,7 @@ function CabinCard({ cabin }) {
         <div className="">
           <Link
             href={`/cabins/${id}`}
-            className="py-4 w-[100%] rounded-lg transition-all inline-block text-center text-gray-100 bg-primary-400"
+            className="py-4 w-[100%] rounded-lg transition-all inline-block text-center text-gray-100 bg-primary-500"
           >
             Details & reservation &rarr;
           </Link>

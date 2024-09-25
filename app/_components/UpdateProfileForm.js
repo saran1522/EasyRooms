@@ -47,7 +47,7 @@ export default function UpdateProfileForm({ guest, children }) {
         />
       </div>
 
-      <div className="flex justify-end items-center gap-6">
+      <div className="flex lg:justify-end w-full items-center gap-6">
         <SubmitButton>Update profile</SubmitButton>
       </div>
     </form>

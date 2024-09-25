@@ -5,7 +5,6 @@ import {
   isSameDay,
   isWithinInterval,
 } from "date-fns";
-import { useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { useReservation } from "./ReservationContext";
@@ -32,7 +31,7 @@ function DateSelector({ cabin, bookedDates, settings }) {
   const cabinPrice = numNights * (regularPrice - discount);
 
   return (
-    <div className="flex flex-col justify-between">
+    <div className="flex w-full overflow-auto flex-col justify-between">
       <DayPicker
         className="pt-12 place-self-center"
         mode="range"

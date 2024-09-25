@@ -16,8 +16,8 @@ export default function ReservationList({ bookings }) {
     await deleteReservation(bookingId);
   }
   return (
-    <div>
-      <ul className="space-y-6">
+    <div className="w-full overflow-auto">
+      <ul className="space-y-6 w-full overflow-auto">
         {optimisticBookings.map((booking) => (
           <ReservationCard
             booking={booking}

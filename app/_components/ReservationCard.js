@@ -24,7 +24,7 @@ function ReservationCard({ booking, onDelete }) {
   } = booking;
 
   return (
-    <div className="flex border border-primary-800">
+    <div className="flex border w-full overflow-auto  border-primary-800">
       <div className="relative h-32 aspect-square">
         <Image
           fill
@@ -59,12 +59,14 @@ function ReservationCard({ booking, onDelete }) {
         </p>
 
         <div className="flex gap-5 mt-auto items-baseline">
-          <p className="text-xl font-semibold text-accent-400">${totalPrice}</p>
+          <p className="text-xl font-semibold text-primary-400">
+            ${totalPrice}
+          </p>
           <p className="text-primary-300">&bull;</p>
           <p className="text-lg text-primary-300">
             {numGuests} guest{numGuests > 1 && "s"}
           </p>
-          <p className="ml-auto text-sm text-primary-400">
+          <p className="ml-auto text-sm">
             Booked {format(new Date(created_at), "EEE, MMM dd yyyy, p")}
           </p>
         </div>
@@ -75,7 +77,7 @@ function ReservationCard({ booking, onDelete }) {
           <>
             <Link
               href={`/account/reservations/${id}`}
-              className="group flex items-center gap-2 uppercase text-xs font-bold text-primary-300 border-b border-primary-800 flex-grow px-3 hover:bg-accent-600 transition-colors hover:text-primary-50"
+              className="group flex items-center gap-2 uppercase text-xs font-bold text-primary-300 border-b border-primary-800 flex-grow px-3 hover:bg-primary-500 transition-colors hover:text-primary-50"
             >
               <PencilSquareIcon className="h-5 w-5 text-primary-600 group-hover:text-primary-100 transition-colors" />
               <span className="mt-1">Edit</span>
