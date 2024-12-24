@@ -12,7 +12,7 @@ export default async function Page() {
   const cabins = await getCabins();
   const noOfCabins = cabins.length;
   return (
-    <div className="grid lg:grid-cols-5 p-4 lg:gap-x-24 gap-y-12 lg:gap-y-32 text-lg items-center">
+    <div className="h-full grid lg:grid-cols-5 p-4 lg:gap-x-24 gap-y-12 lg:gap-y-32 text-lg items-center">
       <div className="col-span-3">
         <h1 className="text-4xl mb-10 font-medium">Welcome to EasyRooms</h1>
 

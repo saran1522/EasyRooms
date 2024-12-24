@@ -2,6 +2,7 @@ import Header from "./_components/Header";
 import Logo from "./_components/Logo";
 import Navigation from "./_components/Navigation";
 import "@/app/_styles/globals.css";
+import { Inter } from "next/font/google";
 
 // import { Poppins } from "next/font/google";
 import { ReservationProvider } from "./_components/ReservationContext";
@@ -14,23 +15,28 @@ export const metadata = {
   },
 };
 
-// const poppins = Poppins({
-//   subsets: ["latin"],
-//   display: "swap",
-//   weight: ["300"],
-// });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`bg-[#ffffff] text-gray-800 borde`}>
-        <Header />
+      <body
+        className={`h-full bg-[url('/wave2.jpg')] bg-center bg-cover text-gray-800 borde ${inter.className}`}
+      >
+        <div className="w-full flex flex-col h-full backdrop-blur-lg">
+          <Header />
 
-        <main className="p-2">
-          <ReservationProvider>{children}</ReservationProvider>
-        </main>
-        <Footer />
+          <main className="p-2 flex-grow min-h-96">
+            <ReservationProvider>{children}</ReservationProvider>
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
 }
+
+//
